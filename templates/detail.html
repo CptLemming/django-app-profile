@@ -1,0 +1,10 @@
+{% extends 'profile/base.html' %}
+{% load menu_tags %}
+
+{% block content %}
+<h1>Profile: {{ profile.username }}</h1>
+
+<ul>
+	{% show_menu 2 100 0 100 %}
+</ul>
+{% endblock content %}

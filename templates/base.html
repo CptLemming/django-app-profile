@@ -1,0 +1,41 @@
+{% load menu_tags %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Profile</title>
+
+		{% block css %}
+		<link rel="stylesheet" href="http://cdn.foundation5.zurb.com/foundation.css">
+		<style>
+			body {
+				background-color: #f0eeeb;
+			}
+		</style>
+		{% endblock css %}
+
+		<!-- jQuery here to enable widgets to work -->
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<ul>
+			{% show_menu 1 1 100 100 %}
+		</ul>
+		<div role="main" class="page-main">
+			<div class="row">
+				<div class="small-12 medium-12 large-12 columns">
+					{% block content %}{% endblock content %}
+				</div>
+			</div>
+		</div>
+
+		{% block js %}
+		<script type="text/javascript" src="http://cdn.foundation5.zurb.com/foundation.js"></script>
+		<script type="text/javascript">
+			$(document).foundation();
+		</script>
+		{% endblock js %}
+	</body>
+</html>

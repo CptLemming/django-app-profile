@@ -1,0 +1,10 @@
+{% extends 'profile/base.html' %}
+
+{% block content %}
+<h1>Profiles</h1>
+<ul>
+	{% for user in users %}
+		<li>{{ user.id }} - {{ user.username }}</li>
+	{% endfor %}
+</ul>
+{% endblock content %}
